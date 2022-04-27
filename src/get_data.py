@@ -14,7 +14,7 @@ scraped_data = []
 
 def get_data(username):
     options = Options()
-    options.headless = True
+    # options.headless = True
     browser = webdriver.Chrome(
         executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe",
         options=options)
@@ -64,14 +64,14 @@ def get_data(username):
             hs = data[20]
             first_blood = data[22]
 
-            test = {"Match-Number": match_number, "END_RESULT": end_result, "Match-Duration": match_duration,
+            test = {"Serial": match_number, "Outcome": end_result, "Span": match_duration,
                     "Time": _time,
-                    "Result": [team_score, enemy_team_score], "Map": _map, "Average_Score": avg_score,
+                    "Result": [team_score, enemy_team_score], "Map": _map, "AvgScore": avg_score,
                     "Kills": kill,
                     "Deaths": death,
-                    "Assists": assist, "KDA": kda, "KD": kd, "Average_Damage": avg_damage,
-                    "Headshot_Percentage": hs,
-                    "First_Blood": first_blood}
+                    "Assists": assist, "KDA": kda, "KD": kd, "AvgDmg": avg_damage,
+                    "HS %": hs,
+                    "1stBloods": first_blood}
             res = f'{match_number} match history scraped'
             match_number += 1
             scraped_data.append(test)
@@ -95,7 +95,7 @@ def compare_results(username):
     except UnboundLocalError:
         pass
     try:
-        scraped_value = [scraped_data[0]['Match-Duration'], scraped_data[0]['Time']]
+        scraped_value = [scraped_data[0]['Span'], scraped_data[0]['Time']]
         if scraped_value == saved_info:
             document = collection.find({'player_name': player_name})
             for info in document:
@@ -119,4 +119,4 @@ def compare_results(username):
 
 
 # if __name__ == '__main__':
-#     compare_results(username)
+#     compare_results('bendover#fast')

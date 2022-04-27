@@ -1,7 +1,7 @@
 from src.config import get_url
 from pymongo import MongoClient
 
-cluster = "mongodb+srv://rango:ylEEDSikq33TLyKx@cluster0.jbwqp.mongodb.net/valorant?retryWrites=true&w=majority"
+cluster = ""
 
 client = MongoClient(cluster)
 
@@ -34,7 +34,7 @@ def get_saved_info(player_name):
                 saved_match_data.append(k)
 
         match_duration = saved_match_data[2][0]['Time']
-        saved_match_time = saved_match_data[2][0]['Match-Duration']
+        saved_match_time = saved_match_data[2][0]['Span']
         saved_info = [saved_match_time, match_duration]
         return saved_info, saved_match_data
     except IndexError:

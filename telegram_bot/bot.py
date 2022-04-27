@@ -12,7 +12,7 @@ from src.last_updated import update_results, last_updated
 
 from database import collection
 
-updater = Updater("5198699048:AAGHQ2cOGxJdrlo2Xy5T87lTEhbDE1IXwL0",
+updater = Updater("",
                   use_context=True)
 
 input = []
