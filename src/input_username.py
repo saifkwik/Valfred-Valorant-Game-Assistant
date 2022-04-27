@@ -1,11 +1,12 @@
 game_name = []
 
 
-def take_input():
-    username = input('Enter your gamename with tag (ex -peacemaker#dceu) : ').strip().lower()
-    if '#' not in username:
-        print("missing tag '#'")
-        exit()
+def take_input(username=''):
+    if username == '':
+        username = input('Enter your gamename with tag (ex -peacemaker#dceu) : ').strip().lower()
+        if '#' not in username:
+            print("missing tag '#'")
+            exit()
     username = username.replace(' ', '').replace('#', '-')
     # game_name.append(username)
     url = "https://dak.gg/valorant/profile/{username}".format(username=username)
@@ -23,4 +24,4 @@ def validate_input(soup):
     print('Username is wrong')
     return True
 
-# print(take_input())
+# print(take_input('peacemaker#dceu'))

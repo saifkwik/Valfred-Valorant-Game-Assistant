@@ -1,24 +1,24 @@
 import pprint
 import time
 
-from src.config import url
+from src.config import get_url
 
 from selenium.webdriver.chrome.options import Options
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from database import collection, player_name, saved_info
+from database import collection, get_saved_info, get_player_name
 
 scraped_data = []
 
 
-def get_data():
+def get_data(username):
     options = Options()
     options.headless = True
     browser = webdriver.Chrome(
         executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe",
         options=options)
-
+    url = get_url(username)[0]
     browser.get(url)
     time.sleep(3)
     html_source = browser.page_source
@@ -81,9 +81,19 @@ def get_data():
     return res
 
 
-def compare_results():
-    res = get_data()
-    print(res)
+def compare_results(username):
+    saved_info =''
+    player_name = get_player_name(username)[0]
+    try:
+        saved_info = get_saved_info(player_name)[0]
+    except TypeError:
+        pass
+
+    try:
+        res = get_data(username)
+        print(res)
+    except UnboundLocalError:
+        pass
     try:
         scraped_value = [scraped_data[0]['Match-Duration'], scraped_data[0]['Time']]
         if scraped_value == saved_info:
@@ -108,5 +118,5 @@ def compare_results():
         pass
 
 
-if __name__ == '__main__':
-    compare_results()
+# if __name__ == '__main__':
+#     compare_results(username)

@@ -1,7 +1,7 @@
-from src.config import game_name
+from src.config import get_url
 from pymongo import MongoClient
 
-cluster = ""
+cluster = "mongodb+srv://rango:ylEEDSikq33TLyKx@cluster0.jbwqp.mongodb.net/valorant?retryWrites=true&w=majority"
 
 client = MongoClient(cluster)
 
@@ -19,21 +19,28 @@ def saved_players():
     return h
 
 
-player_name = game_name[0]
+def get_player_name(username=''):
+    player_name = get_url(username)[1]
+    return player_name
 
-saved_info = []
-try:
-    t = collection.find({'player_name': player_name})
 
-    saved_match_data = []
-    for b in t:
-        for k in b.values():
-            saved_match_data.append(k)
+def get_saved_info(player_name):
+    try:
+        t = collection.find({'player_name': player_name})
 
-    match_duration = saved_match_data[2][0]['Time']
-    saved_match_time = saved_match_data[2][0]['Match-Duration']
-    saved_info = [saved_match_time, match_duration]
+        saved_match_data = []
+        for b in t:
+            for k in b.values():
+                saved_match_data.append(k)
 
-except IndexError:
-    pass
+        match_duration = saved_match_data[2][0]['Time']
+        saved_match_time = saved_match_data[2][0]['Match-Duration']
+        saved_info = [saved_match_time, match_duration]
+        return saved_info, saved_match_data
+    except IndexError:
+        pass
 
+# b = get_player_name('peacemaker#dceu')
+# print(b)
+# a = get_saved_info('peacemaker-dceu')
+# print(a)

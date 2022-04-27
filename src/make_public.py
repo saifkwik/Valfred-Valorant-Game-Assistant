@@ -5,13 +5,13 @@ import selenium
 from selenium import webdriver
 
 
-def make_public(url):
+def make_public():
     print(f'Authorize API access to the account to proceed, Browser will autoclose ')
     driver = webdriver.Chrome(
         executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe")
 
     # URL of the website
-    url = ""
+    url = "https://auth.riotgames.com/login#client_id=dakgg&redirect_uri=https%3A%2F%2Fdak.gg%2Fauth%2Friotgames%2Fcallback&response_type=code&scope=openid%20offline_access&state=val"
 
     driver.get(url)
 
@@ -28,3 +28,5 @@ def make_public(url):
         except selenium.common.exceptions.WebDriverException:
             print('Browser force closed')
             sys.exit()
+
+# make_public()

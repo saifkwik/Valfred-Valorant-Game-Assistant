@@ -1,17 +1,29 @@
-import time
+game_name = []
 
-from database import saved_players
-from src.last_updated import update_results, last_updated
-from src.config import url
-from src.get_data import compare_results
 
-def exisiting_players():
-    saved_playernames = saved_players()
-    print(saved_playernames)
-    print("Shadows travelling ")
-    update_results(url)
-    last_updated(url)
-    compare_results()
-    t2 = time.perf_counter()
-    print(f'Time taken: {t2} seconds')
-exisiting_players()
+def take_input(username=''):
+    if username == '':
+        username = input('Enter your gamename with tag (ex -peacemaker#dceu) : ').strip().lower()
+        if '#' not in username:
+            print("missing tag '#'")
+            exit()
+    username = username.replace(' ', '').replace('#', '-')
+    # game_name.append(username)
+    url = "https://dak.gg/valorant/profile/{username}".format(username=username)
+    game_name.append(username)
+    # print(url)
+    return url, game_name
+
+
+def validate_input(soup):
+    print('Checking if username is valid')
+    a = soup.find_all('span', text='Please check nickname#tag and try again.')
+    if len(a) == 0:
+        print('Username is correct')
+        return False
+    print('Username is wrong')
+    return True
+
+
+# a = take_input(username='sensodyne#clear')
+# print(a)
