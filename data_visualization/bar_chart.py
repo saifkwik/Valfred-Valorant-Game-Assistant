@@ -34,15 +34,17 @@ def bar_chart(saved_match_data, player_name):
     ax.bar_label(rects2, padding=3)
 
     fig.tight_layout()
-    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-kill_vs_deaths.jpg', bbox_inches='tight', dpi =300)
+    # plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-kill_vs_deaths.jpg', bbox_inches='tight', dpi =300)
+    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\KILLvsDEATHS.jpg',
+                bbox_inches='tight', dpi=300)
 
     average_damage = []
     headshot_percentage = []
     maps = []
     try:
         for g in range(15):
-            average_damage.append(saved_match_data[2][g]['Average_Damage'])
-            headshot_percentage.append(saved_match_data[2][g]['Headshot_Percentage'].replace('%', ''))
+            average_damage.append(saved_match_data[2][g]['AvgDmg'])
+            headshot_percentage.append(saved_match_data[2][g]['HS %'].replace('%', ''))
             maps.append(saved_match_data[2][g]['Map'])
     except IndexError:
         pass
@@ -60,4 +62,6 @@ def bar_chart(saved_match_data, player_name):
 
     plt.title('Avg Damage and Headshot %')
     plt.ylabel('← 1 to 15 matches')
-    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-avg_dmg&hs%.jpg', bbox_inches='tight', dpi =300)
+    # plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-avg_dmg&hs%.jpg', bbox_inches='tight', dpi =300)
+    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\average_damage&headshot_percentage.jpg',
+                bbox_inches='tight', dpi=300)

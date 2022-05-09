@@ -7,7 +7,7 @@ def get_results(saved_match_data):
     maps = []
     try:
         for g in range(30):
-            end_result.append(saved_match_data[2][g]['END_RESULT'])
+            end_result.append(saved_match_data[2][g]['Outcome'])
             maps.append(saved_match_data[2][g]['Map'])
     except IndexError:
         pass
@@ -76,7 +76,9 @@ def pie_chart(player_name, saved_match_data):
             shadow=True, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-MapFrequency&Win%', bbox_inches='tight', dpi=300)
+    # plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\{player_name}-MapFrequency&Win%', bbox_inches='tight', dpi=300)
+    plt.savefig(f'C:\\Users\\Rango\PycharmProjects\\valorant-stats-tracker\\images\\MapFrequency&Win%.jpg',
+                bbox_inches='tight', dpi=300)
 
 
 # pie_chart()

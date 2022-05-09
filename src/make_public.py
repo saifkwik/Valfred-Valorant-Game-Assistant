@@ -8,7 +8,7 @@ from selenium import webdriver
 def make_public():
     print(f'Authorize API access to the account to proceed, Browser will autoclose ')
     driver = webdriver.Chrome(
-        executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe")
+        executable_path="C:\\Users\\Rango\\Downloads\\chromedriver_win32\\chromedriver.exe")
 
     # URL of the website
     url = "https://auth.riotgames.com/login#client_id=dakgg&redirect_uri=https%3A%2F%2Fdak.gg%2Fauth%2Friotgames%2Fcallback&response_type=code&scope=openid%20offline_access&state=val"

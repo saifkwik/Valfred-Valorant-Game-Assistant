@@ -14,9 +14,9 @@ scraped_data = []
 
 def get_data(username):
     options = Options()
-    # options.headless = True
+    options.headless = True
     browser = webdriver.Chrome(
-        executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe",
+        executable_path="C:\\Users\\Rango\\Downloads\\chromedriver_win32\\chromedriver.exe",
         options=options)
     url = get_url(username)[0]
     browser.get(url)
@@ -95,7 +95,8 @@ def compare_results(username):
     except UnboundLocalError:
         pass
     try:
-        scraped_value = [scraped_data[0]['Span'], scraped_data[0]['Time']]
+        # scraped_value = [scraped_data[0]['Span'], scraped_data[0]['Time']]
+        scraped_value =1
         if scraped_value == saved_info:
             document = collection.find({'player_name': player_name})
             for info in document:
@@ -118,5 +119,5 @@ def compare_results(username):
         pass
 
 
-# if __name__ == '__main__':
-#     compare_results('bendover#fast')
+if __name__ == '__main__':
+    compare_results('sensodyne#clear')

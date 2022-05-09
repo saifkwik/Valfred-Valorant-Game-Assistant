@@ -10,7 +10,7 @@ def update_results(url):
     options = Options()
     options.headless = True
     browser = webdriver.Chrome(
-        executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe",
+        executable_path="C:\\Users\\Rango\\Downloads\\chromedriver_win32\\chromedriver.exe",
         options=options)
     try:
         browser.get(url)
@@ -29,7 +29,7 @@ def last_updated(url):
     options = Options()
     options.headless = True
     browser = webdriver.Chrome(
-        executable_path="C:\\Users\\Rango\\PycharmProjects\\ESports-Match-Tracker-Service\\chrome_driver\\chromedriver.exe",
+        executable_path="C:\\Users\\Rango\\Downloads\\chromedriver_win32\\chromedriver.exe",
         options=options)
     browser.get(url)
     html_source = browser.page_source
