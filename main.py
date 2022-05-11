@@ -9,6 +9,7 @@ from database import get_saved_info, get_player_name
 from data_visualization.bar_chart import bar_chart
 from data_visualization.pie_chart import pie_chart
 from report_pdf.report import generate_pdf
+import os
 
 
 def check_status(username):
@@ -47,8 +48,11 @@ def main(username):
         check_status(username)
 
         t = time.perf_counter()
+        generate_pdf(username)
         print(f'Time taken: {t} seconds')
-    generate_pdf(username)
+        path = 'report.pdf'
+        os.system(path)
+
 
 if __name__ == '__main__':
-    main('peacemaker#dceu')
+    main('bendover#fast')

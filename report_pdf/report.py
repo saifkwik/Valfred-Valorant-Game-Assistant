@@ -32,9 +32,9 @@ def table_data(player):
 
 
 def render_table_header(TABLE_COL_NAMES):
-    pdf.add_page()
-    pdf.set_font("helvetica", "B", 8)
-    pdf.cell(40, 10, "Competitive Match history from Last 30 matches played :", ln=True)
+    # pdf.add_page()
+    # pdf.set_font("helvetica", "B", 8)
+    # pdf.cell(40, 10, "Competitive Match history from Last 30 matches played :", ln=True)
     line_height = pdf.font_size * 2.9
     col_width = pdf.epw / len(TABLE_COL_NAMES)  # distribute content evenly
     pdf.set_font("helvetica", "B", 7)  # enabling bold text
@@ -86,6 +86,9 @@ def delete_images():
 def generate_pdf(username):
     print('Generating Pdf Report')
     player = get_player_name(username)[0]
+    pdf.add_page()
+    pdf.set_font("helvetica", "B", 12)
+    pdf.cell(40, 10, "Competitive Match history from Last 30 matches played :", ln=True)
     TABLE_COL_NAMES = table_column(player)
     TABLE_DATA = table_data(player)
     render_table_header(TABLE_COL_NAMES)
@@ -102,6 +105,7 @@ def generate_pdf(username):
     add_graphics()
     pdf.output("report.pdf")
     delete_images()
+    print('Report successfully generated')
 
 
 # generate_pdf('peacemaker#dceu')

@@ -66,7 +66,7 @@ def get_data(username):
 
             test = {"Serial": match_number, "Outcome": end_result, "Span": match_duration,
                     "Time": _time,
-                    "Result": [team_score, enemy_team_score], "Map": _map, "AvgScore": avg_score,
+                    "Result": result, "Map": _map, "AvgScore": avg_score,
                     "Kills": kill,
                     "Deaths": death,
                     "Assists": assist, "KDA": kda, "KD": kd, "AvgDmg": avg_damage,
@@ -82,7 +82,7 @@ def get_data(username):
 
 
 def compare_results(username):
-    saved_info =''
+    saved_info = ''
     player_name = get_player_name(username)[0]
     try:
         saved_info = get_saved_info(player_name)[0]
@@ -95,12 +95,12 @@ def compare_results(username):
     except UnboundLocalError:
         pass
     try:
-        # scraped_value = [scraped_data[0]['Span'], scraped_data[0]['Time']]
-        scraped_value =1
+        scraped_value = [scraped_data[0]['Span'], scraped_data[0]['Time']]
         if scraped_value == saved_info:
             document = collection.find({'player_name': player_name})
             for info in document:
-                pprint.pprint(info)
+                # pprint.pprint(info)
+                pass
         else:
             # delete existing entry for player
             myquery = {"player_name": player_name}
@@ -114,10 +114,10 @@ def compare_results(username):
                 v = collection.update_one({"player_name": player_name}, {"$push": {"match_history": history}})
             document = collection.find({'player_name': player_name})
             for info in document:
-                pprint.pprint(info)
+                # pprint.pprint(info)
+                pass
     except IndexError:
         pass
 
-
-if __name__ == '__main__':
-    compare_results('sensodyne#clear')
+# if __name__ == '__main__':
+#     compare_results('sensodyne#clear')
