@@ -70,7 +70,7 @@ def add_graphics():
         pdf.cell(40, 10, ln=True)
 
 
-def delete_images():
+def delete_files():
     folder = 'C:\\Users\\Rango\\PycharmProjects\\valorant-stats-tracker\\images'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
@@ -104,7 +104,8 @@ def generate_pdf(username):
             pdf.ln(line_height)
     add_graphics()
     pdf.output("report.pdf")
-    delete_images()
+    file_path = 'C:\\Users\\Rango\\PycharmProjects\\valorant-stats-tracker\\images'
+    delete_files()
     print('Report successfully generated')
 
 

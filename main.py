@@ -9,6 +9,7 @@ from database import get_saved_info, get_player_name
 from data_visualization.bar_chart import bar_chart
 from data_visualization.pie_chart import pie_chart
 from report_pdf.report import generate_pdf
+from send_email import get_email
 import os
 
 
@@ -52,7 +53,9 @@ def main(username):
         print(f'Time taken: {t} seconds')
         path = 'report.pdf'
         os.system(path)
+        get_email(username)
+        os.remove("report.pdf")
 
 
 if __name__ == '__main__':
-    main('bendover#fast')
+    main('lincolnkachota#bhai')
