@@ -8,7 +8,7 @@ Get Visual data statistics report of your played Competitive matches. The statis
 [<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png" width="512"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png)
 [<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png" width="1000"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png)
 
-[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png" width="600"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png" width="1000"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png)
 ## Installation
 
 Clone the repo and install the requirements of the program.
