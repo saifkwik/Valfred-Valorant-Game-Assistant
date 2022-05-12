@@ -4,9 +4,9 @@ Get Visual data statistics report of your played Competitive matches. The statis
 
 ## Screenshots 
 
-[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png" width="720"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png)
-[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png" width="720"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png)
-[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png" width="500"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png" width="512"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png" width="512"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png" width="1000"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png)
 
 [<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png" width="600"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png)
 ## Installation
