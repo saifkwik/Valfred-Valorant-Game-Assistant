@@ -3,9 +3,10 @@
 Get Visual data statistics report of your played Competitive matches. The statistics report is formatted in pdf and it will ask if the user wants it to be sent via email. It scrapes the data from dak.gg using Selenium and Beautiful Soup. For Data Storage I am using MongoDB with the Pymongo library, other libraries used in the program are Matplotlib, Numpy, Pandas for data visualization, Fpdf2 for generating pdf files, Os & Shutil for Opening and deletion of files, Smtplib for formatting and sending emails.
 
 ## Screenshots 
-![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png)
-![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png)
-![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png)
+
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/bar_charts.png" width="250"/>](image.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/pie_chart.png" width="250"/>](image.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/match_history.png" width="250"/>](image.png)
 ![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/email.png)
 ## Installation
 
