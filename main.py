@@ -42,12 +42,11 @@ def check_status(username):
     pie_chart(player_name, saved_match_data)
 
 
-def main(username):
+def main(username=''):
     url = take_input(username)[0]
     soup = get_soup(url)
     if not validate_input(soup):
         check_status(username)
-
         t = time.perf_counter()
         generate_pdf(username)
         print(f'Time taken: {t} seconds')
@@ -57,5 +56,11 @@ def main(username):
         os.remove("report.pdf")
 
 
+def valfred(username=''):
+    if username == '':
+        username = str(input('Enter your gamename with tag (ex -peacemaker#dceu) :'))
+    main(username)
+
+
 if __name__ == '__main__':
-    main('lincolnkachota#bhai')
+    valfred()
