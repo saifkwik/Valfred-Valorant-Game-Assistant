@@ -28,8 +28,8 @@ pip install requirements.txt
  ![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/valfred.png)
 
 ## MongoDB player Database Design
- ![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db1.png)
- ![alt text](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db2.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db1.png" width="400"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db1.png)
+[<img src="https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db2.png" width="400"/>](https://github.com/saifkwik/Valfred-Valorant-Game-Assistant/blob/main/screenshots/player_db2.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
